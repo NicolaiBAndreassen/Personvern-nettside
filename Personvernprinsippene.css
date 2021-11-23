@@ -1,0 +1,160 @@
+body { /* bakgrunn og tekst farge */
+    background-color: #e8fffe;
+    color: #081b26;
+    font-family: sans-serif;
+  }
+
+.beholder {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,2fr) minmax(0,2fr) minmax(0,1fr);
+  grid-template-rows: 175px 350px 350px 350px 300px 300px 300px 300px 125px ;
+  grid-template-areas: 
+  'header header header header'
+  '. GDPR GDPR .'
+  '. GDPRbilde GDPRbilde .'
+  '. Personvernprinsippene Personvernprinsippene .'
+  '. LovligRettferdigGjennomsiktig Formålsbegrensing .'
+  '. Dataminimering Personvernprinsippenebilde  .'
+  '. Riktighet Lagringsbegrensning .'
+  '. IntegritetKonfidensialitet Ansvarlighet .'
+  'footer footer footer footer';
+  grid-row-gap: 50px;
+  grid-column-gap: 50px;
+}
+
+.header {
+  grid-area: header;
+  background-color: #94AEB2;
+  text-align: center;
+  font-size: 20px;
+}
+
+.GDPR {
+  grid-area: GDPR;
+  background-color: #30797D;
+  font-size: 20px;
+  padding: 25px;
+}
+
+.GDPRbilde {
+  grid-area: GDPRbilde;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+}
+h2 {
+  font-size: 30px;
+}
+
+.Personvernprinsippene {
+  grid-area: Personvernprinsippene;
+  background-color: #30797D;
+  font-size: 20px;
+  padding: 25px;
+}
+
+.lovligRettferdigGjennomsiktig {
+  grid-area: LovligRettferdigGjennomsiktig;
+  background-color: #74B5B8;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.formålsBegrensing {
+  grid-area: Formålsbegrensing;
+  background-color: #74B5B8;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.dataMinimering {
+  grid-area: Dataminimering;
+  background-color: #74B5B8;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.riktighet {
+  grid-area: Riktighet;
+  background-color: #74B5B8;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.Personvernprinsippenebilde {
+  grid-area: Personvernprinsippenebilde;
+  place-self: center;
+  padding: 20px;
+}
+
+.lagringsBegrensning {
+  grid-area: Lagringsbegrensning;
+  background-color: #74B5B8;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.integritetKonfidensialitet {
+  grid-area: IntegritetKonfidensialitet;
+  background-color: #74B5B8;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.ansvarlighet {
+  grid-area: Ansvarlighet;
+  background-color: #74B5B8;   
+  font-size: 20px;
+  padding: 20px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #081b26;
+  color: #e8fffe;
+  text-align: center;
+}
+
+.footer h4 {
+  font-size: 25px;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+@media only screen and (max-width:1100px) {
+  h1 {font-size: 25px;}
+  h2 {font-size: 20px;}
+  p {font-size: 15px;}
+
+  .beholder { /* Deling */
+    grid-template-columns: minmax(0,1fr) minmax(0,4fr) minmax(0,1fr);
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    grid-template-areas: 
+    'header header header'
+    '. GDPR .'
+    '. GDPRbilde .'
+    '.Personvernprinsippene .'
+    '. LovligRettferdigGjennomsiktig .'
+    '. Formålsbegrensing .'
+    '. Dataminimering .'
+    '. Personvernprinsippenebilde .'
+    '. Riktighet .'
+    '. Lagringsbegrensning .'
+    '. IntegritetKonfidensialitet .'
+    '. Ansvarlighet .'
+    'footer footer footer';
+    grid-gap: 50px;
+  }
+
+  @media only screen and (max-width:750px) {
+    h1 {font-size: 20px;}
+    h2 {font-size: 15px;}
+    p {font-size: 10px;}
+  }
+}

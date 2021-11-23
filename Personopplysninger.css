@@ -1,0 +1,99 @@
+body {
+    background-color: #e8fffe;
+    color: #081b26;
+    font-family: sans-serif;
+  }
+
+.beholder {
+  display: grid;
+  grid-template-columns: minmax(0,2fr) minmax(0,2fr) minmax(0,2fr) minmax(0,2fr);
+  grid-template-rows: 175px 300x 300px 125px;
+  grid-template-areas: 
+  'header header header header'
+  'personopplysninger personopplysninger personopplysningerbilder personopplysningerbilder'
+  'cookiesbilder cookiesbilder cookies cookies'
+  'footer footer footer footer';
+  grid-row-gap: 50px;
+}
+
+.header {
+  grid-area: header;
+  background-color: #94AEB2;
+  text-align: center;
+  font-size: 20px;
+}
+
+.personopplysninger {
+  grid-area: personopplysninger;
+  background-color: #74B5B8;
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.personopplysninger p {
+  text-align: left;
+}
+
+.personopplysningerbilder {
+  grid-area: personopplysningerbilder;
+  background-color: #74B5B8;
+  text-align: center;
+}
+
+.cookies {
+  grid-area: cookies;
+  background-color: #30797D;
+  padding: 20px;
+  font-size: 20px;
+  text-align: right;
+}
+
+.cookies p {
+  text-align: left;
+}
+
+.cookiesbilder {
+  grid-area: cookiesbilder;
+  background-color: #30797D;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #081b26;
+  color: #e8fffe;
+  text-align: center;
+}
+
+.footer h4 {
+  font-size: 25px;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+@media only screen and (max-width:715px) {
+  h1 {font-size: 20px;}
+
+  .beholder { /* Deling */
+    grid-template-columns: minmax(0,1fr) minmax(0,4fr) minmax(0,1fr);
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
+    'header header header'
+    '. personopplysninger .'
+    '. personopplysningerbilder .'
+    '. cookies .'
+    '. cookiesbilder .'
+    'footer footer footer';
+    grid-row-gap: 50px;
+    grid-column-gap: 50px;
+  }
+}

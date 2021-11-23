@@ -1,0 +1,155 @@
+body {
+    background-color: #e8fffe;
+    color: #081b26;
+    font-family: sans-serif;
+  }
+
+  .beholder {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(0,2fr) minmax(0,2fr) minmax(0,1fr);
+    grid-template-rows: 650px 500px 280px 280px 280px 125px;
+    grid-template-areas:
+    'overskrift overskrift overskrift overskrift'
+    '. video video .'
+    '. personvern personvern .'
+    '. hvaerpersonvern Kameraer .'
+    '. Overvåking utenpersonvern .'
+    'footer footer footer footer';
+    grid-row-gap: 50px;
+    grid-column-gap: 50px;
+  }
+
+  .overskrift {
+    grid-area: overskrift;
+    background-image: url('index bilder/Lås.jpg');
+    background-size: 100%;
+    background-attachment: cover;
+    background-repeat: no-repeat;
+    color: #e8fffe;
+    text-align: center;
+    text-size-adjust: 50px;
+  }
+
+  .overskrift h1 {
+    font-size: 200px;
+  }
+
+  .Informasjonsfilm {
+    grid-area: video;
+  }
+
+  .personvern {
+    grid-area: personvern;
+    background-color: #30797D;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .personvern h1 {
+    text-align: center;
+    font-size: 75px;
+  }
+
+  .hvaErPersonvern {
+    grid-area: hvaerpersonvern;
+    text-align: left;
+    font-size: 20px;
+    background-color: #74B5B8;
+    padding: 25px;
+  }
+
+  .utenPersonvern {
+    grid-area: utenpersonvern;
+    background-color: #74B5B8;
+    text-align: left;
+    font-size: 20px;
+    padding: 40px;
+  }
+
+  .Kameraer {
+    grid-area: Kameraer;
+  }
+
+  .Overvåking {
+    grid-area: Overvåking;
+  }
+
+  .footer {
+    grid-area: footer;
+    background-color: #081b26;
+    color: #e8fffe;
+    text-align: center;
+  }
+  
+  .footer h4 {
+    font-size: 25px;
+  }
+  
+  .footer a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  @media only screen and (max-width:1200px) {
+    .overskrift h1 {font-size: 150px;}
+  }
+
+  @media only screen and (max-width:1150px) {
+    .hvaErPersonvern {
+      font-size:15px;
+    }
+
+    .utenPersonvern {
+      font-size:15px;
+    }
+
+    .bilde1 {
+      width: auto;
+      height: auto;
+    }
+    
+  }
+
+  @media only screen and (max-width:850px) {
+    .overskrift h1 {
+      font-size: 100px;
+    }
+
+    .hvaErPersonvern, .utenPersonvern {
+      font-size:13px;
+    }
+
+    .personvern h1 {
+      font-size: 50px;
+    }
+  }
+   
+  @media only screen and (max-width:715px) {
+    .overskrift h1 {
+      font-size: 60px;
+    }
+
+    .beholder { /* Deling */
+      grid-template-columns: minmax(0,1fr) minmax(0,4fr) minmax(0,1fr);
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-areas:
+      'overskrift overskrift overskrift'
+      '. video .'
+      '. personvern.'
+      '. hvaerpersonvern .'
+      '. Kameraer .'
+      '. utenpersonvern .'
+      '. Overvåking .'
+      'footer footer footer';
+      grid-row-gap: 50px;
+      grid-column-gap: 50px;
+    }
+
+    .personvern h1 {
+      font-size: 15px;;
+    }
+  }
+
+  @media only screen and (max-width:350px) {
+    .overskrift h1 {font-size: 40px;}
+  }

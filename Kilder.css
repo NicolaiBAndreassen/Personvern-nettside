@@ -1,0 +1,64 @@
+body {
+    background-color: #e8fffe;
+    color: #081b26;
+    font-family: sans-serif;
+  }
+
+.beholder {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(0,2fr) minmax(0,2fr) minmax(0,1fr);
+    grid-template-rows: 200px 450px 125px;
+    grid-template-areas: 
+    'header header header header'
+    '. Bildekilder Informasjonkilder.'
+    'footer footer footer footer';
+    grid-column-gap: 50px;  
+}
+
+.header {
+    grid-area: header;
+    background-color: #30797D;
+}
+
+.header h1 {
+  font-size: 100px;
+  text-align: center;
+  color: #e8fffe;
+}
+
+.Bildekilder {
+    grid-area: Bildekilder;
+    background-color: #74B5B8;
+    padding: 10px;
+}
+
+.Informasjonkilder {
+  grid-area: Informasjonkilder;
+  background-color: #74B5B8;
+  padding: 10px;
+}
+
+.Informasjonkilder h2, .Bildekilder h2 { 
+  text-align: center;
+}
+
+.Bildekilder ul p a, .Informasjonkilder ul p a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #081b26;
+    color: #e8fffe;
+    text-align: center;
+  }
+  
+  .footer h4 {
+    font-size: 25px;
+  }
+  
+  .footer a {
+    color: inherit;
+    text-decoration: inherit;
+  }
