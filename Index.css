@@ -21,7 +21,7 @@ body {
 
   .overskrift {
     grid-area: overskrift;
-    background-image: url('index bilder/Lås.jpg');
+    background-image: url('Lås.jpg');
     background-size: 100%;
     background-attachment: cover;
     background-repeat: no-repeat;
