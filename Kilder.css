@@ -29,13 +29,13 @@ body {
 .Bildekilder {
     grid-area: Bildekilder;
     background-color: #74B5B8;
-    padding: 10px;
+    padding: 5px;
 }
 
 .Informasjonkilder {
   grid-area: Informasjonkilder;
   background-color: #74B5B8;
-  padding: 10px;
+  padding: 5px;
 }
 
 .Informasjonkilder h2, .Bildekilder h2 { 
